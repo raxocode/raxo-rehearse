@@ -1,0 +1,27 @@
+name: Feature Request
+description: Suggest an enhancement or new feature for Raxo Rehearse
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please note that v0.1 focuses specifically on local SQLite migration rehearsal with zero runtime dependencies.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or Use Case
+      description: What challenge or migration scenario does this solve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed Solution
+      description: Describe how you envision this feature working in the CLI or report.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Considered Alternatives
+      description: Any alternative tools or workarounds you considered.

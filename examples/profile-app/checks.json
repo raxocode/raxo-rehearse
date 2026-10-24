@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "checks": [
+    {
+      "id": "published_profiles_preserved",
+      "sql": "SELECT COUNT(*) FROM profiles WHERE status = 'published'",
+      "expect": {"kind": "unchanged"}
+    },
+    {
+      "id": "no_empty_handles",
+      "sql": "SELECT COUNT(*) FROM profiles WHERE handle IS NULL OR trim(handle) = ''",
+      "expect": {"kind": "equals", "value": 0}
+    }
+  ]
+}
